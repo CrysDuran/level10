@@ -4,7 +4,7 @@
 
 #include "fileutil.h"
 
-// Array of arrays
+// Array of arrayss
 char ** loadFileAA(char *filename, int *size) {
     FILE *in = fopen(filename, "r");
     if (!in) {
@@ -85,6 +85,6 @@ void freeAA(char **arr, int size) {
     for (int i = 0; i < size; i++) {
         free(arr[i]); // Free each string
     }
-	
+
     free(arr); // Free the array itself
 }
